@@ -11,7 +11,11 @@ function MovieList() {
                 return (
                     <section key={movieObj.id} className="card">
                         <h3>{movieObj.title}</h3>
-                        <img src={movieObj.imgURL} alt="Movie poster" />
+                        
+                        { movieObj.imgURL 
+                            && <img src={movieObj.imgURL} alt="Movie poster" />
+                        }
+
                         <p>Year: {movieObj.year}</p>
                         <p>Rating: {movieObj.rating}</p>
                     </section>
