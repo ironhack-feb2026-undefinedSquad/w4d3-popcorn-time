@@ -50,3 +50,17 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.card {
+  max-width: 80%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid #666;
+  box-shadow: 5px 5px 10px -5px;
+  transition: 0.4s;
+}
+.card:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 10px 0px;
+}
+
