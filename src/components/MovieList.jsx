@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 import movies from "../data/movies.json"
+import MovieSummary from "./MovieSummary"
 
 
 function MovieList() {
@@ -30,18 +31,10 @@ function MovieList() {
 
             {moviesToDisplay.map((movieObj, i, arr) => {
                 return (
-                    <section key={movieObj.id} className="card">
-                        <h3>{movieObj.title}</h3>
-
-                        {movieObj.imgURL
-                            && <img src={movieObj.imgURL} alt="Movie poster" />
-                        }
-
-                        <p>Year: {movieObj.year}</p>
-                        <p>Rating: {movieObj.rating}</p>
-
-                        <button onClick={() => { deleteMovie(movieObj.id) }}>Delete this movie</button>
-                    </section>
+                    <MovieSummary
+                        movieDetails={movieObj}
+                        onDelete={deleteMovie}
+                    />
                 )
             })}
         </>
