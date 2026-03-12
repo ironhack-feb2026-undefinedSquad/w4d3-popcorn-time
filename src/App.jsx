@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom"
 import movies from "./data/movies.json"
 
 import MovieList from "./pages/MovieList"
+import MovieDetails from "./pages/MovieDetails"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Header from "./components/Header"
@@ -41,6 +42,7 @@ function App() {
         <Route path="/" element={<MovieList moviesArr={moviesToDisplay} onDelete={deleteMovie} />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/movies/:movieId" element={<MovieDetails moviesArr={moviesToDisplay} />} />
         <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
 
