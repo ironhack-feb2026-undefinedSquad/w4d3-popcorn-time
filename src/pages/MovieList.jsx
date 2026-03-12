@@ -9,6 +9,7 @@ function MovieList(props) {
             {props.moviesArr.map((movieObj, i, arr) => {
                 return (
                     <MovieSummary
+                        key={movieObj.id}
                         movieDetails={movieObj}
                         onDelete={props.onDelete}
                     />
