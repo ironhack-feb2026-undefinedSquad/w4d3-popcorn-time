@@ -81,3 +81,7 @@ button:focus-visible {
   margin: 1rem;
   padding: 1rem;
 }
+
+.card img {
+  max-height: 182px;
+}
