@@ -9,6 +9,8 @@ function MovieSummary(props) {
                 && <img src={props.movieDetails.imgURL} alt="Movie poster" />
             }
 
+            <p>Rating: {props.movieDetails.rating}</p>
+
             <div>
                 
                 {/* invoke callback in the grandparent component */}
